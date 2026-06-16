@@ -1,11 +1,12 @@
 import type { BackendResponse } from './types';
 
 // Replace this URL with your actual backend endpoint
-const API_ENDPOINT = 'http://localhost:5000/message';
+const API_ENDPOINT = 'https://certificationexamrag-chatbot-backend.onrender.com/message';
 
 export async function sendMessage(
   message: string,
   sessionId: string,
+  
 ): Promise<BackendResponse> {
   const response = await fetch(API_ENDPOINT, {
     method: 'POST',
